@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="xh-CN">
+<head>
+    <meta charset="UTF-8">
+    <!--<link type="text/css" rel="stylesheet" href="../lib/animate.css"/>-->
+    <!--<link type="text/css" rel="stylesheet" href="../lib/bootstrap3.3.7.css"/>-->
+    <title></title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.1"></script>
+    <!--
+
+    -->
+</head>
+<body>
+<div id="example">
+    <ul>
+        <li @click="clickAlert">alert</li>
+        <li @click="clickConfirm">confirm</li>
+        <li @click="clickPrompt">prompt</li>
+    </ul>
+</div>
+</body>
+<script>
+    var vm = new Vue({
+        el: '#example',
+        data: {
+        },
+        methods: {
+            clickAlert() {
+                alert('测试alert...')
+            },
+            // confirm 向用户询问确认或取消,分别返回true,false
+            clickConfirm() {
+                let responding = confirm('测试confirm...');
+                console.log(responding);
+            },
+            // prompt 用来获取用户输入,可以设置默认值,当点击取消时返回null
+            clickPrompt() {
+               let input = prompt('测试prompt', 'defaultString');
+               console.log(input);
+            }
+        },
+        computed: {
+        }
+    })
+</script>
+</html>

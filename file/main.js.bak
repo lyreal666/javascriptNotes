@@ -41,6 +41,7 @@ var fileOp = function () {
 
 function main() {
 	fileOp();
+	alertAll();
 
 }
 
